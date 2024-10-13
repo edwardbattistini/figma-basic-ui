@@ -86,37 +86,34 @@
 			}
 
 			button {
-				background-color: var(--figma-color-bg-brand);
 				min-width: 96px;
-				color: var(--figma-color-text-onbrand);
-				border: var(--figma-color-bg-brand);
 				border-radius: 6px;
 				padding: 8px 12px 8px 12px;
 				cursor: pointer;
 			}
-			button:hover {
+
+      button.primary {
+        background-color: var(--figma-color-bg-brand);
+        color: var(--figma-color-text-onbrand);
+				border: var(--figma-color-bg-brand);
+      }
+
+			button.primary:hover {
 				background-color: var(--figma-color-bg-brand-hover);
 			}
 
       button.secondary {
         background-color: var(--figma-color-bg-secondary);
-        min-width: 96px;
-				color: var(--figma-color-text-brand);
-				border-radius: 6px;
-				padding: 8px 12px 8px 12px;
-				cursor: pointer;
+        color: var(--figma-color-text-secondary);
+				border: var(--figma-color-border);
       }
       button.secondary:hover {
-        background-color: var(--figma-color-bg-secondary-hover);
+        background-color: var(--figma-color-bg-tertiary-hover);
       }
 
-			.brand {
-				color: var(--figma-color-bg-brand);
-			}
-
-			.secondary {
-				color: var(--figma-color-text-secondary);
-			}
+      .danger {
+        color: var(--figma-color-text-danger) !important;
+      }
 
 			label > input[type="checkbox"] {
 				color: var(--figma-color-text);
@@ -268,8 +265,9 @@
 
 		<div class="section">
 			<h4 class="secondary">Buttons</h4>
-			<button id="submitButton">Primary</button>
+			<button class="primary" id="submitButton">Primary</button>
       <button class="secondary" id="">Secondary</button>
+      <button class="secondary danger" id="">Danger</button>
 		</div>
 	</body>
 	<script>
