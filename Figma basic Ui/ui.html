@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link
+			href="https://fonts.googleapis.com/css?family=Inter"
+			rel="stylesheet"
+		/>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Basic HTML Elements Plugin</title>
+		<style>
+
+			html {
+				padding: 0;
+			}
+			body {
+				display: flex;
+				font-family: "Inter", Helvetica, sans-serif;
+				flex-direction: column;
+				background-color: var(--figma-color-bg);
+				color: var(--figma-color-text);
+				padding-top: 0px;
+			}
+
+			h1,
+			h2,
+			h3,
+			h4 {
+				margin: 0px;
+				margin-bottom: 1rem;
+				leading-trim: both;
+				text-edge: cap;
+			}
+
+			label {
+				font-size: 12px;
+        padding-right: 1rem;
+				color: var(--figma-color-text-secondary);
+			}
+			.section {
+				margin-top: 16px;
+				flex-direction: column;
+				padding: 8px;
+				gap: 16px;
+				background: var(--figma-color-bg);
+			}
+
+			.form-block {
+				display: flex;
+				gap: 4px;
+				flex-direction: column;
+				margin-bottom: 0.75rem;
+			}
+
+			input,
+			select,
+			textarea {
+				background-color: var(--figma-color-bg-secondary);
+				border-radius: 4px;
+				color: var(--figma-color-text);
+				border: 1px var(--figma-color-border);
+				padding: 4px 4px 4px 4px;
+			}
+			input:hover,
+			textarea:hover,
+			select:hover {
+				outline: 1px solid var(--figma-color-border);
+			}
+
+			input:focus,
+			textarea:focus,
+			select:focus,
+			button:focus {
+				outline: 1px solid var(--figma-color-border-selected);
+			}
+
+			textarea,
+			select {
+				width: 100%;
+				font-family: "Inter";
+				margin-top: 5px;
+				padding: 5px;
+			}
+
+			button {
+				background-color: var(--figma-color-bg-brand);
+				min-width: 96px;
+				color: var(--figma-color-text-onbrand);
+				border: var(--figma-color-bg-brand);
+				border-radius: 6px;
+				padding: 8px 12px 8px 12px;
+				cursor: pointer;
+			}
+			button:hover {
+				background-color: var(--figma-color-bg-brand-hover);
+			}
+
+      button.secondary {
+        background-color: var(--figma-color-bg-secondary);
+        min-width: 96px;
+				color: var(--figma-color-text-brand);
+				border-radius: 6px;
+				padding: 8px 12px 8px 12px;
+				cursor: pointer;
+      }
+      button.secondary:hover {
+        background-color: var(--figma-color-bg-secondary-hover);
+      }
+
+			.brand {
+				color: var(--figma-color-bg-brand);
+			}
+
+			.secondary {
+				color: var(--figma-color-text-secondary);
+			}
+
+			label > input[type="checkbox"] {
+				color: var(--figma-color-text);
+				align-items: center;
+				vertical-align: middle;
+				margin-bottom: 0.4rem;
+				margin-right: 0.4rem;
+				cursor: pointer;
+			}
+
+			label > input[type="radio"] {
+				color: var(--figma-color-text);
+				align-items: center;
+				vertical-align: middle;
+				margin-bottom: 0.4rem;
+				margin-right: 0.4rem;
+				cursor: pointer;
+			}
+
+			.cursor-pointer {
+				cursor: pointer; /* Changes cursor to pointer when hovering over the label */
+			}
+      .brand {
+        color: (var(--figma-color-text-brand-secondary
+        ));
+      }
+		</style>
+	</head>
+	<body>
+		
+		<div class="section">
+      <h1 class="brand">Basic Html UI</h1>
+			<h4 class="secondary">Headings</h4>
+			<div class="form-block">
+				<h1>H1 heading</h1>
+				<h2>H2 Heading</h2>
+				<h3>H3 Heading</h3>
+				<h4>H4 Heading</h4>
+			</div>
+		</div>
+
+		<div class="section">
+			<h4 class="secondary">Text inputs</h4>
+			<div class="form-block">
+				<label for="textInput">Text Input:</label>
+				<input
+					type="text"
+					id="textInput"
+					placeholder="Enter text..."
+				/>
+			</div>
+			<div class="form-block">
+				<label for="emailInput">Email Input:</label>
+				<input
+					type="email"
+					id="emailInput"
+					placeholder="Enter your email..."
+				/>
+			</div>
+			<div class="form-block">
+				<label for="passwordInput">Password Input:</label>
+				<input
+					type="password"
+					id="passwordInput"
+					placeholder="Enter your password..."
+				/>
+			</div>
+			<div class="form-block">
+				<label for="colorInput">Colour</label>
+				<input
+					type="color"
+					id="colorInput" 
+				/>
+			</div>
+			<div class="form-block">
+				<label for="textareaInput">Your message:</label>
+				<textarea
+					id="textareaInput"
+					rows="4"
+					placeholder="Enter your message..."
+				></textarea>
+			</div>
+		</div>
+		<div class="section">
+			<h4 class="secondary">Checkbox</h2>
+			<div class="form-block">
+				<label>
+					<input
+						type="checkbox"
+						id="checkbox1"
+					/>
+					Option 1
+				</label>
+				<label>
+					<input
+						type="checkbox"
+						id="checkbox2"
+					/>
+					Option 2
+				</label>
+				<label>
+					<input
+						disabled
+						type="checkbox"
+						id="checkbox3"
+					/>
+					Option 3
+				</label>
+			</div>
+		</div>
+
+		<div class="section">
+			<h4 class="secondary">Radio Buttons</h4>
+			<label>
+				<input
+					type="radio"
+					name="radioGroup"
+					value="option1"
+				/>
+				Option 1
+			</label>
+			<label>
+				<input
+					type="radio"
+					name="radioGroup"
+					value="option2"
+				/>
+				Option 2
+			</label>
+			<label>
+				<input
+					disabled
+					type="radio"
+					name="radioGroup"
+					value="option2"
+				/>
+				Option 3
+			</label>
+		</div>
+		<div class="section">
+			<h4 class="secondary">Select Dropdown</h4>
+			<label for="selectInput">Select an option:</label>
+			<select id="selectInput">
+				<option value="option1">Option 1</option>
+				<option value="option2">Option 2</option>
+				<option disabled value="option3">Disabled Option 3</option>
+			</select>
+		</div>
+
+		<div class="section">
+			<h4 class="secondary">Buttons</h4>
+			<button id="submitButton">Primary</button>
+      <button class="secondary" id="">Secondary</button>
+		</div>
+	</body>
+	<script>
+		// Example of handling button click event
+		document.getElementById("submitButton").onclick = () => {
+			const textInput = document.getElementById("textInput").value
+			const emailInput = document.getElementById("emailInput").value
+			const passwordInput = document.getElementById("passwordInput").value
+			const checkbox1 = document.getElementById("checkbox1").checked
+			const checkbox2 = document.getElementById("checkbox2").checked
+			const radioGroup = document.querySelector(
+				'input[name="radioGroup"]:checked'
+			)?.value
+			const selectInput = document.getElementById("selectInput").value
+			const textareaInput = document.getElementById("textareaInput").value
+
+			// Log the input values for now
+			console.log({
+				textInput,
+				emailInput,
+				passwordInput,
+				checkbox1,
+				checkbox2,
+				radioGroup,
+				selectInput,
+				textareaInput,
+			})
+		}
+	</script>
+</html>
