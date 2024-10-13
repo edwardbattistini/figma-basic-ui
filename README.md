@@ -1,2 +1,5 @@
 # figma basic-ui
- A Js less styling repo to clone for your own project
+ An HTML and CSS only starter UI for your figma plugins needs. 
+ Perfect for lightweight plugin projects
+
+ 
